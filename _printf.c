@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
+#include <stddef.h>
 /**
  * _printf - prints arguments on the standard output
  * @format: formatted string to be printed
@@ -8,16 +9,14 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0;
-	int num_printed = 0;
-	int len;
+	int len, i = 0, num_printed = 0;
 
 	spec_t array[] = {
-		{'c', handle_character}, {'s', handle_string},
-		{'%', handle_modulus}, {'d', handle_decimal},
-		{'i', handle_integer}
+		{'c', handle_character}, {'s', handle_string}, {'%', handle_modulus},
+		{'d', handle_decimal}, {'i', handle_integer}, {'b', handle_binary}
 	};
-
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 
 	while (*format)
@@ -30,6 +29,8 @@ int _printf(const char *format, ...)
 				if (array[i].identifier == *format)
 				{
 					len = (array[i].function(args));
+					if (len == -1)
+						return (-1);
 					num_printed += len;
 				}
 				i++;

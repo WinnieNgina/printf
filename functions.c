@@ -49,7 +49,13 @@ int _strlen(char *s)
 int handle_string(va_list args)
 {
 	char *str = (va_arg(args, char*));
-	int len = _strlen(str);
+	int len;
+
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	len = _strlen(str);
 
 	_puts(str);
 	return (len);

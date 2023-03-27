@@ -18,9 +18,11 @@ int handle_modulus(va_list);
 int handle_character(va_list);
 int handle_decimal(va_list);
 int handle_integer(va_list);
+int handle_binary(va_list);
 void _puts(char *str);
 int _strlen(char *s);
 int _putchar(char c);
 int print_number(int n);
+char *decimal_to_binary(int decimal);
 
 #endif
