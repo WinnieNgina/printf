@@ -13,9 +13,9 @@ int _printf(const char *format, ...)
 	int len;
 
 	spec_t array[] = {
-		{'c', handle_character},
-		{'s', handle_string},
-		{'%', handle_modulus}
+		{'c', handle_character}, {'s', handle_string},
+		{'%', handle_modulus}, {'d', handle_decimal},
+		{'i', handle_integer}
 	};
 
 	va_start(args, format);
@@ -43,7 +43,6 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
-	/* _putchar('\0'); */
 	va_end(args);
 	return (num_printed);
 }
