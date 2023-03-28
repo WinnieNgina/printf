@@ -11,15 +11,15 @@
 int handle_pointer(va_list args)
 {
 	void *ptr = va_arg(args, void *);
+	char hex[16];
+	unsigned long num = (unsigned long) ptr;
+	int i, j, leading_zeros = 1;
+	int count = 0;
 
 	if (ptr == NULL)
 	{
 		return (-1);
 	}
-	char hex[16];
-	unsigned long num = (unsigned long) ptr;
-	int i, j, leading_zeros = 1;
-	int count = 0;
 
 	_putchar('0');
 	_putchar('x');
