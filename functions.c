@@ -1,19 +1,7 @@
 #include <stdarg.h>
 #include "main.h"
 #include <stdio.h>
-/**
- * _puts - prints a string
- * @str: string printed
- */
-void _puts(char *str)
-{
-	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		_putchar(str[i]);
-	}
-}
 /**
  * handle_character - print a character
  * @args: the charcter printed
@@ -24,23 +12,7 @@ int handle_character(va_list args)
 	_putchar(va_arg(args, int));
 	return (1);
 }
-/**
- * _strlen - calculates the length of a string
- * @s: the string
- * Return: total legth of a string
- */
-int _strlen(char *s)
-{
-	int i = 1, total = 0;
-	char pl = s[0];
 
-	while (pl != '\0')
-	{
-		total++;
-		pl = s[i++];
-	}
-	return (total);
-}
 /**
  * handle_string - prints the string on cmd
  * @args: string printed
@@ -70,4 +42,35 @@ int handle_modulus(__attribute__((unused)) va_list args)
 {
 	_putchar('%');
 	return (1);
+}
+/**
+ * _puts - prints a string
+ * @str: string printed
+ */
+void _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+}
+
+/**
+ *  _strlen - Returns the length of a string.
+ *  @s: The string varible whose legth is checked.
+ *  Return: length of the input string
+ */
+int _strlen(char *s)
+{
+	int i = 1, total = 0;
+	char pl = s[0];
+
+	while (pl != '\0')
+	{
+		total++;
+		pl = s[i++];
+	}
+	return (total);
 }

@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 		{'c', handle_character}, {'s', handle_string}, {'%', handle_modulus},
 		{'d', handle_decimal}, {'i', handle_integer}, {'b', handle_binary},
 		{'o', handle_octal}, {'u', handle_unsigned}, {'x', handle_hex_low},
-		{'X', handle_hex_up}
+		{'X', handle_hex_up}, {'S', handle_wideString}
 	};
 	if (format == NULL)
 		return (-1);

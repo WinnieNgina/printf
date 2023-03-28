@@ -1,6 +1,7 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 #include <stdarg.h>
+#include <wchar.h>
 
 int _printf(const char *format, ...);
 /**
@@ -23,6 +24,7 @@ int handle_octal(va_list);
 int handle_unsigned(va_list);
 int handle_hex_low(va_list);
 int handle_hex_up(va_list);
+int handle_wideString(va_list);
 char *decimalToHexadecimal(int decimal);
 char *decimalToOctal(int decimalNum);
 char *toLower(char *str);
@@ -31,5 +33,6 @@ int _strlen(char *s);
 int _putchar(char c);
 int print_number(int n);
 char *decimal_to_binary(int decimal);
+char *special_string(wchar_t *wstr);
 
 #endif
