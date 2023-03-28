@@ -34,5 +34,6 @@ int _putchar(char c);
 int print_number(int n);
 char *decimal_to_binary(int decimal);
 char *special_string(wchar_t *wstr);
+int handle_pointer(va_list);
 
 #endif

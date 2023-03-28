@@ -63,7 +63,6 @@ int handle_hex_up(va_list args)
 	int len = _strlen(strHexa);
 
 	_puts(strHexa);
-	
 	return (len);
 
 }
