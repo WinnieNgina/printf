@@ -16,7 +16,7 @@ int handle_ROT13(va_list args)
 
 	if (str == NULL)
 	{
-		str = "(null)";
+		str = "(AHYY)";
 	}
 	len = _strlen(str);
 
