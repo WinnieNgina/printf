@@ -11,16 +11,18 @@
  */
 int handle_ROT13(va_list args)
 {
-	char *str = rot13((va_arg(args, char*)));
+	char *str = (va_arg(args, char*));
 	int len;
+	char *rot;
 
 	if (str == NULL)
 	{
 		str = "(AHYY)";
 	}
-	len = _strlen(str);
+	rot = rot13(str);
+	len = _strlen(rot);
 
-	_puts(str);
+	_puts(rot);
 	return (len);
 }
 
