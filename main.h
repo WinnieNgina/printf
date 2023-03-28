@@ -35,5 +35,7 @@ int print_number(int n);
 char *decimal_to_binary(int decimal);
 char *special_string(wchar_t *wstr);
 int handle_pointer(va_list);
+int handle_reverse_str(va_list);
+void print_rev(char *s);
 
 #endif
