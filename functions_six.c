@@ -18,7 +18,13 @@ int handle_pointer(va_list args)
 
 	if (ptr == NULL)
 	{
-		return (-1);
+		char *str = "(nil)";
+		int len;
+
+		len = _strlen(str);
+
+		_puts(str);
+		return (len);
 	}
 
 	_putchar('0');
