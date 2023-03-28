@@ -36,6 +36,8 @@ char *decimal_to_binary(int decimal);
 char *special_string(wchar_t *wstr);
 int handle_pointer(va_list);
 int handle_reverse_str(va_list);
+int handle_ROT13(va_list);
 void print_rev(char *s);
+char *rot13(char *str);
 
 #endif
